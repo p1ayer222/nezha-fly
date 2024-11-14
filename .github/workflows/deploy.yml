@@ -30,6 +30,6 @@ jobs:
       - name: deploy
         if: ${{ env.new_release == 'yes'  }}
         run: |
-          echo '${{ secrets.CONFIG }}' > ./config.yaml && ls
+          echo '${{ secrets.CONFIG }}' > ./config.yaml && cat ./config.yaml
           flyctl deploy --remote-only
 
