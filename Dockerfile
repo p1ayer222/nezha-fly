@@ -6,6 +6,7 @@ FROM ghcr.io/naiba/nezha-dashboard:latest
 # COPY etc/litestream.yml /etc/litestream.yml
 
 COPY config.yaml .
+COPY sqlite.db .
 COPY run.sh .
 RUN chmod 777 *
 ENTRYPOINT ["./run.sh"]
